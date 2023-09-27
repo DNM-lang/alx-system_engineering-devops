@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | tr '\n' ', ' | sed 's/,$/\n/'
+ls -Ap | sed -E '/^(\.\/|\.+\/)/!s/$/, /' | tr -d '\n' && echo
