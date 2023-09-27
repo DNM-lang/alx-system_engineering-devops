@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -ap1 | sed -E ':a;N;$!ba;s/\n/, /g' | sed -E 's/(^|[^0-9A-Za-z])[0-9A-Za-z]+/\n&/g' | sort -n -d | tr -d '\n' && echo
-
+ls -ap1 | tr '\n' ', ' | sed 's/,$/\n/'
