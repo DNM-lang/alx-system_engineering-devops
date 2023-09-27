@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap | sed -E '/^(\.\/|\.+\/)/!s/$/, /' | tr -d '\n' && echo
+ls -amvp
